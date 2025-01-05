@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .settings {
+      margin: 10px 0;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    .counter {
+      background: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .counter-small {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter">
+    <div>Events Collected: <span id="eventCount">0</span></div>
+    <div class="counter-small">Target: <span id="eventTarget">100</span></div>
+  </div>
+  <div class="settings">
+    <label>
+      Auto-save frequency (minutes):
+      <input type="number" id="saveFrequency" min="1" value="60">
+    </label>
+    <label>
+      Events before auto-save:
+      <input type="number" id="eventThreshold" min="1" value="100">
+    </label>
+  </div>
+  <button id="downloadNow">Download Data Now</button>
+  <button id="clearData">Clear Collected Data</button>
+  <script src="popup.js"></script>
+</body>
+</html>

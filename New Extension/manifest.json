@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Anonymous E-commerce Analytics",
+    "version": "1.0",
+    "description": "Collects anonymized e-commerce data",
+    "permissions": [
+      "webNavigation",
+      "storage",
+      "tabs",
+      "downloads",
+      "*://*/*"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+
